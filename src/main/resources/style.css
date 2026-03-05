@@ -1,0 +1,33 @@
+/* Der Hintergrund der App */
+.root {
+    -fx-background-color: #f4f4f9;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Das Eingabefeld verschönern */
+.text-field {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ddd;
+    -fx-padding: 8;
+}
+
+/* Den Button stylen */
+.button {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8;
+}
+
+.button:hover {
+    -fx-background-color: #357abd;
+}
+
+/* Die Liste sauberer machen */
+.list-view {
+    -fx-background-radius: 5;
+    -fx-border-color: #ddd;
+}
