@@ -7,14 +7,22 @@ public class ToDoController {
     private TextField taskInputField;
 
     @FXML
-    private ListView<String> taskListView;
+    private ListView<TodoTask> taskListView;
+    @FXML
+    public void initialize() {
+        taskListView.setCellFactory(param -> new TaskCell());
+    }
 
     @FXML
     protected void onAddTaskClick() {
-        String task = taskInputField.getText();
-        if (!task.isEmpty()) {
-            taskListView.getItems().add(task);
+        String title = taskInputField.getText();
+        if (title != null && !title.isEmpty()) {
+            // Erstelle ein neues Objekt statt nur einen String
+            TodoTask newTask = new TodoTask(title);
+            taskListView.getItems().add(newTask);
             taskInputField.clear();
         }
     }
+
+
 }
